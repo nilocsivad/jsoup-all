@@ -9,25 +9,26 @@ import org.junit.Test;
  * Hello world!
  */
 public class JsoupShowUrlHtml {
-	
+
 	/**
 	 * 
 	 */
-	public JsoupShowUrlHtml() {}
-	
+	public JsoupShowUrlHtml() {
+	}
+
 	@Test
 	public void run() throws Exception {
-		
-		System.out.println( "Hello World! -------------------------" );
-		
-		this.getUrlHtml( "" );
+
+		System.out.println("Hello World! -------------------------");
+
+		this.getUrlHtml("");
 	}
-	
-	public String getUrlHtml( String url ) throws IOException {
-		
-		String htm = Jsoup.connect( url ).timeout( 1000 * 60 * 3 ).get().html();
-		System.out.println( htm );
+
+	public String getUrlHtml(String url) throws IOException {
+
+		String htm = Jsoup.connect(url).timeout(1000 * 60 * 3).get().html();
+		System.out.println(htm);
 		return htm;
 	}
-	
+
 }
