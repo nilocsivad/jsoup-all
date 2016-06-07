@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.iam_vip.jsoup_all.link;
+package com.iam_vip.jsoup_all.torrent;
 
 import java.io.IOException;
 import java.util.ArrayList;
