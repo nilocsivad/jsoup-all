@@ -25,19 +25,31 @@ public class _meijutt extends _Jsoup {
 	@Test
 	public void run() throws Exception {
 
-		String url = "";
+		String[] arr = { 
+				"-----", 
+				"-----" };
 
-		getBTLinks(url);
+		for (String url : arr) {
+			getBTLinks(url);
+		}
 
 	}
 
 	protected void getBTLinks(String url) throws IOException {
 
+		if (url == null || "".equals(url) || !url.startsWith("http://")) {
+			return;
+		}
+		
 		Document doc = super.doc(url);
 		Element el = doc.getElementsByClass("down_list").get(0);
 		el.getElementsByTag("input").forEach(e -> {
 			System.out.println(e.attr("value"));
 		});
+		System.out.println();
+		System.out.println();
+		System.out.println();
+
 	}
 
 }
