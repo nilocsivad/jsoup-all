@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>API</title>
+
+		<style type="text/css">
+			* {
+				font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				font-size: 13px;
+				color: #232323;
+				margin: 0;
+				padding: 0
+			}
+			
+			a {
+				font-size: inherit;
+				color: #2e68e0
+			}
+			
+			a:link,
+			a:visited {
+				text-decoration: none
+			}
+			
+			a:active,
+			a:hover {
+				color: #bb4242;
+				text-decoration: underline
+			}
+			
+			b, font, i, del {
+				font-size: inherit;
+			}
+			
+			h1 {
+				font-size: 22px
+			}
+			
+			h2 {
+				font-size: 20px
+			}
+			
+			h3 {
+				font-size: 18px
+			}
+			
+			h4 {
+				font-size: 16px
+			}
+			
+			h5 {
+				font-size: 14px
+			}
+			
+			h6 {
+				font-size: 12px
+			}
+			
+			img {
+				border: none
+			}
+			
+			input {
+				cursor: pointer
+			}
+			
+			input[type=text],
+			input[type=password] {
+				cursor: default
+			}
+			
+			li,
+			ol,
+			ul {
+				list-style: none
+			}
+		</style>
+		<style type="text/css">
+			p {
+				padding: 4px 0;
+			}
+			
+			.hide-it {
+				display: none;
+			}
+			
+			.fs16 {
+				font-size: 16px;
+			}
+			
+			.red {
+				color: red;
+			}
+		
+			.torrent-box {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+			}
+			
+			.torrent-box .wrap-box {
+				margin: 0 auto;
+				padding: 40px 0;
+				width: 80%;
+			}
+			
+			.torrent-box .wrap-box {
+				margin: 0 auto;
+				padding: 40px 0;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<h1 style="text-align: center; height: 40px; line-height: 40px;">Torrent</h1>
+
+#foreach($key in ${maps.keySet()})  
+
+		<div class="torrent-box">
+			<div class="wrap-box">
+				<a href="${maps.get($key)}"><img src="$key" /></a>
+			</div>
+		</div>
+		
+#end
+
+		<p><br/><br/><br/><br/></p>
+
+	</body>
+
+	<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+
+	<script type="text/javascript">
+		$(function() {
+			/** 隔行变色 **/
+			$(".torrent-box").each(function(i, dom) {
+				if (i % 2 == 0) {
+					$(dom).css({
+						backgroundColor: "#e8e8e8"
+					});
+				} else {
+					$(dom).css({
+						backgroundColor: "#ffffff"
+					});
+				}
+			});
+		});
+	</script>
+
+</html>
