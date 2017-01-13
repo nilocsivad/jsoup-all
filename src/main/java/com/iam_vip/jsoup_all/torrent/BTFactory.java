@@ -18,6 +18,7 @@ public class BTFactory {
 		MAP.put("http://www.ttmeiju.com", _ttmeiju.class);
 		MAP.put("http://tv.rs05.com", _rs05.class);
 		MAP.put("http://www.yyste.com", _yyste.class);
+		MAP.put("http://www.xunleicang.com", _xunleicang.class);
 	}
 
 	/**
