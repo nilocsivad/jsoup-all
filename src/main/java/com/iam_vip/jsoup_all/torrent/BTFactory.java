@@ -47,17 +47,32 @@ public class BTFactory {
 	 */
 	public static void main(String[] args) throws Exception {
 
-		String url = "";
+		String[] array = {
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"" };
 
-		Class<?> cls = getInstance(url);
-		if (cls != null) {
+		// String url = "";
+		for (String url : array) {
 
-			__BT instance = (__BT) cls.newInstance();
-			instance.getBTLinks(url);
+			if (url.equals(""))
+				continue;
 
-		}
-		else {
-			System.err.format("Can not find implements to '%s' \r\n", url);
+			Class<?> cls = getInstance(url);
+			if (cls != null) {
+
+				__BT instance = (__BT) cls.newInstance();
+				instance.getBTLinks(url);
+
+			}
+			else {
+				System.err.format("Can not find implements to '%s' \r\n", url);
+			}
+
 		}
 
 	}
