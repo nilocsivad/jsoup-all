@@ -27,8 +27,10 @@ public class cn163 extends __BT {
 
 		Document doc = super.doc(url);
 		Element el = doc.getElementById("entry");
-		el.getElementsByTag("ol").get(0).getElementsByTag("a").forEach(e -> {
-			System.out.println(e.attr("href"));
+		el.getElementsByTag("a").forEach(e -> {
+			String link = e.attr("href");
+			if (link.startsWith("ed2k") || link.startsWith("thunder"))
+				System.out.println(link);
 		});
 
 		System.out.println();
